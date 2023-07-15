@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: workflow_dispatch sample
+
+on:
+  workflow_dispatch:
+    inputs:
+      choice:
+        type: choice
+        description: 'choice variable'
+        required: true
+        default: 'b'
+        options:
+          - 'a'
+          - 'b'
+          - 'c'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+    - name: print log
+      run: echo "Hello!"
+
+    - name: string test
+      if: ${{ inputs.choice }} == 'a'
+      run: echo ""choice=${{ inputs.choice }}"
