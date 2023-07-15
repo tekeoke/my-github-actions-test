@@ -24,4 +24,8 @@ jobs:
 
       - name: string test
         if: ${{ inputs.choice }} == 'a'
-        run: echo ""choice=${{ inputs.choice }}"
+        run: echo "choice=${{ inputs.choice }}"
+
+      - name: string test
+        if: ${{ inputs.choice }} == 'b'
+        run: echo "choice=${{ inputs.choice }}"
