@@ -27,5 +27,5 @@ jobs:
         run: echo "choice=${{ inputs.choice }}"
 
       - name: choice test b
-        if: ${{ inputs.choice == 'b' }} # ${{ inputs.choice }}  == 'b'
+        if: ${{ inputs.choice == 'b' }} # NG: ${{ inputs.choice }}  == 'b'
         run: echo "choice=${{ inputs.choice }}"
