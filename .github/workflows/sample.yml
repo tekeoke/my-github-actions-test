@@ -22,10 +22,10 @@ jobs:
       - name: print log
         run: echo "Hello!"
 
-      - name: string test
+      - name: choice test a
         if: ${{ inputs.choice }} == 'a'
         run: echo "choice=${{ inputs.choice }}"
 
-      - name: string test
+      - name: choice test b
         if: ${{ inputs.choice }} == 'b'
         run: echo "choice=${{ inputs.choice }}"
