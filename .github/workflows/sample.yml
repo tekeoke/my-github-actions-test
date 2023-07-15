@@ -23,9 +23,9 @@ jobs:
         run: echo "Hello!"
 
       - name: choice test a
-        if: ${{ inputs.choice }} == 'a'
+        if: ${{ inputs.choice == 'a' }}
         run: echo "choice=${{ inputs.choice }}"
 
       - name: choice test b
-        if: ${{ inputs.choice }} == 'b'
+        if: ${{ inputs.choice == 'b' }} # ${{ inputs.choice }}  == 'b'
         run: echo "choice=${{ inputs.choice }}"
